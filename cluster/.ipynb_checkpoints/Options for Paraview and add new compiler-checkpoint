@@ -1,0 +1,17 @@
+moules that must be loaded for using PARAVIEW_MULTIBLOCK
+
+[20215667@tue-login001 ~]$ module load openmpi/gcc/64/current
+[20215667@tue-login001 ~]$ module list
+Currently Loaded Modulefiles:
+ 1) gcc/7.2.0        3) openmpi/gcc/64/4.0.2   5) openmpi/gcc/64/4.0.0    
+ 2) slurm/17.11.12   4) openmpi/gcc/64/4.0.1   6) openmpi/gcc/64/current
+
+
+add compiler module load gcc/9.2.0 
+ 
+[20215667@tue-login001 ~]$ module list
+Currently Loaded Modulefiles:
+ 1) gcc/7.2.0   2) slurm/17.11.12   3) gcc/9.2.0 
+ 
+ Currently Loaded Modulefiles:
+ 1) slurm/17.11.12   2) gcc/10.2.0   3) openmpi/gcc/64/4.1.3

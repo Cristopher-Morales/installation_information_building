@@ -1,0 +1,13 @@
+git clone --recursive https://github.com/Cantera/cantera.git
+
+scons build boost_inc_dir=include
+scons test
+sudo scons install prefix=/home/codes/cantera
+
+
+scons build boost_inc_dir=/home/cristopher/codes/cantera/include libdirname=/home/cristopher/codes/cantera/build/lib
+
+sudo scons install prefix=/home/cristopher/codes/cantera
+
+f90_interface=n libdirname=/home/cristopher/lib prefix=/home/cristopher/ system_eigen=n system_fmt=n
+

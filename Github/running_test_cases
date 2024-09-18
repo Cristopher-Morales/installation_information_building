@@ -1,0 +1,2 @@
+cristopher@cristopher-VirtualBox:~/codes/SU2/TestCases$ cp -r /home/cristopher/codes/SU2/TestCases/* /home/cristopher/codes/TestCases/
+cristopher@cristopher-VirtualBox:~/codes/SU2/TestCases$ python3 serial_regression.py

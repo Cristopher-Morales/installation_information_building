@@ -1,0 +1,40 @@
+Using the EasyBuild Framework, an some new software is available as modules.
+Use the following to get a version of python that support a big set of Scientific software:
+
+module purge
+module use /cm/shared/modules/int/all
+module load slurm
+module load SciPy-bundle
+
+--
+$ python
+Python 3.9.6 (default, Nov  8 2022, 12:04:02)
+[GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import abc
+>>> import numpy
+flexiblas BLAS backend  "OPENBLAS-SERIAL" not found. Loading default (OPENBLAS) instead.
+>>>
+
+
+
+REAL TIME INTERPRETER
+Getting the real time interpreter running is somewhat easier than getting a Python file set up. To run the Python interpreter, open up a terminal and run the command below.
+
+$ PYTHON3
+
+Yes, Python provides its own command for the interpreter. If your distribution was one that used Python 3 by default, just leave the “3” off the end of the command.
+
+When the interpreter opens up, it will print some information in the terminal window and drop you into a different prompt. It should look similar to to the lines below.
+
+Python 3.4.3 (default, Jul 16 2016, 20:19:21) 
+[GCC 4.9.3] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+As long as you’re in the Python interpreter, you will see the >>> prompt.
+
+WHEN YOU’RE DONE WITH THE INTERPRETER, YOU CAN EXIT BY PRESSING 
+
+CTRL+D OR TYPING EXIT() AND PRESSING ENTER.
+
+If you’ve been keeping up, you’re now ready to start familiarizing yourself with Python and experimenting with the language. Know that at some point, you are going to have to use both the interpreter and Python files, so it’s best to familiarize yourself with both.

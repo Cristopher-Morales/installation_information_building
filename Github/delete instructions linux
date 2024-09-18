@@ -1,0 +1,34 @@
+
+How to delete executables from SU2
+
+cristopher@cristopher:~$ sudo bash
+[sudo] password for cristopher: 
+root@cristopher:/home/cristopher# cd usr/local/bin
+bash: cd: usr/local/bin: No such file or directory
+root@cristopher:/home/cristopher# cd local/bin
+bash: cd: local/bin: No such file or directory
+root@cristopher:/home/cristopher# /usr/local/bin
+bash: /usr/local/bin: Is a directory
+root@cristopher:/home/cristopher# cd /usr/local/bin
+root@cristopher:/usr/local/bin# ls
+compute_multipoint.py      merge_solution.py            SU2_CFD_DIRECTDIFF
+compute_polar.py           mesh_deformation.py          SU2_CFD.py
+compute_uncertainty.py     package_tests.py             SU2_DEF
+continuous_adjoint.py      parallel_computation_fsi.py  SU2_DOT
+direct_differentiation.py  parallel_computation.py      SU2_GEO
+discrete_adjoint.py        set_ffd_design_var.py        SU2_Nastran
+finite_differences.py      shape_optimization.py        SU2_SOL
+fsi_computation.py         SU2
+FSI_tools                  SU2_CFD
+root@cristopher:/usr/local/bin# rm SU2_CFD
+root@cristopher:/usr/local/bin# ls
+compute_multipoint.py      FSI_tools                    SU2
+compute_polar.py           merge_solution.py            SU2_CFD_DIRECTDIFF
+compute_uncertainty.py     mesh_deformation.py          SU2_CFD.py
+continuous_adjoint.py      package_tests.py             SU2_DEF
+direct_differentiation.py  parallel_computation_fsi.py  SU2_DOT
+discrete_adjoint.py        parallel_computation.py      SU2_GEO
+finite_differences.py      set_ffd_design_var.py        SU2_Nastran
+fsi_computation.py         shape_optimization.py        SU2_SOL
+root@cristopher:/usr/local/bin# 
+

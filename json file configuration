@@ -1,0 +1,68 @@
+{
+    "configurations": [   
+        {
+            "name": "mixing",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/cristopher/codes/SU2/bin/SU2_CFD",
+            //"args": ["species3_primitiveVenturi_mixingmodel_D.cfg"],
+            //"args": ["2d_slit_burner_master.cfg"],
+            //"args": ["lam_prem_ch4_cht_cfd_master.cfg"],
+            //"args": ["2d_slit_burner_fluid.cfg"],
+            //"args": ["mees.cfg"],
+            //"args": ["burrow.cfg"],
+            "args": ["species2_primitiveVenturi_mixingmodel_viscosity.cfg"],
+            //"args": ["burrow.cfg"],
+            //"args": ["species3_primitiveVenturi_mixingmodel_ND.cfg"],
+            //"args": ["species2_primitiveVenturi_mixingmodel_heatcapacity_H2.cfg"],
+            //"args": ["inv_wedge_HLLC.cfg"],
+            //"args": ["comp_mix.cfg"],
+            //"args": ["comp_mix_mass_flow.cfg"],
+            //"args": ["inv_wedge_ROE.cfg"],
+            //"args": ["scramjet_DLR.cfg"],
+            //"args": ["lam_flatplate.cfg"], 
+            //"args": ["kenics_mixer_tutorial.cfg"],
+            //"args": ["scramjet_DLR_SA.cfg"],
+            "stopAtEntry": false,
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/supersonic",
+            //"cwd": "/home/cristopher/codes/TestCases/species_transport",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/supersonic",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/test_mees",
+            //"cwd":"/home/cristopher/codes/TestCases/species_transport/extension/axysimmetric",
+            //"cwd": "/home/cristopher/codes/TestCases/species_transport/venturi_primitive_3species",
+            //"cwd": "/home/cristopher/codes/Tutorials/compressible/Tutorials/compressible_flow/Inviscid_Wedge",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/supersonic/Inviscid_Wedge",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/supersonic/Inviscid_Wedge/fluid_mixture",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/scramjet_fluidmixture_farfield",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/supersonic/Inviscid_Wedge/fluid_mixture_different_properties",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/scramjet_fluidmixture_farfield/second_simulation/scramjet_fluidmixture_farfield",
+            //"cwd": "/home/cristopher/codes/TestCases/compressible_species_transport",
+            //"cwd": "/home/cristopher/codes/3d_slit_burner/2D_slit_burner",
+            //"cwd": "/home/cristopher/codes/3d_slit_burner/flamelet/03_laminar_premixed_ch4_flame_cht_cfd",
+            //"cwd": "/home/cristopher/codes/3d_slit_burner/2D_slit_burner_const_temp_nithin",
+            //"cwd": "/home/cristopher/codes/TestCases/1D_channel/compressible_ideal_gas",
+            "cwd":"/home/cristopher/codes/TestCases/1D_channel/incompressible",
+            //"cwd": "/home/cristopher/codes/TestCases/1D_channel/compressible",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/scramjet",
+            //"cwd": "/home/cristopher/codes/supersonic_test_case_su2/mees/Files SU2",
+            //"cwd": "/home/cristopher/codes/Tutorials/compressible/Tutorials/compressible_flow/Laminar_Flat_Plate",
+            //"cwd": "/home/cristopher/codes/Tutorials/compressible/Tutorials/compressible_flow/Laminar_Flat_Plate/lam_species_flatplate",
+            //"cwd": "/home/cristopher/codes/Tutorials/compressible/Tutorials/incompressible_flow/Inc_Species_Transport_Composition_Dependent_Model",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}

@@ -1,0 +1,64 @@
+./meson.py build -Dwarning_level=2 -Denable-autodiff=true -Denable-directdiff=false -Dwith-mpi=enabled -Denable-cgns=true -Denable-tecio=false --prefix=/home/cristopher/codes/SU2 --buildtype=debug 
+
+I follow these steps when I install SU2: 
+
+1) I clone the SU2 repository using $ git clone https://github.com/su2code/SU2.git
+2) I check using git status that I am in the develop branch
+3) then ./meson.py build -Dwarning_level=2 -Denable-autodiff=true -Denable-directdiff=false -Dwith-mpi=disabled -Denable-cgns=true -Denable-tecio=false --prefix=/home/cristopher/codes/SU2 --buildtype=debug 
+4) finally I compile with ./ninja -C build install
+
+for cluster upload the following modules:
+
+module load foss/2023a
+module load Python/3.11.3-GCCcore-12.3.0
+module load pkgconfig/1.5.5-GCCcore-12.3.0-python
+
+******* module slurm  and module NewBuild/AMD are not longer needed
+
+******* module load pkgconfig should not be needed for runnning a simulation in the cluster
+
+then go to SU2 and run the following command:
+ 
+./meson.py build --reconfigure -Dwarning_level=2 -Denable-autodiff=true -Denable-directdiff=false -Dwith-mpi=enabled -Denable-cgns=true -Denable-tecio=false --prefix=/home/mech001/20215667/SU2
+
+Finally, run ninja:
+
+./ninja -j 10 -C build install
+
+WARNING: the currently checked out submodule commit in /home/cristopher/codes/SU2/externals/meson does not match the SHA-1 found in the index.
+Use 'git submodule update --init /home/cristopher/codes/SU2/externals/meson' to reset the module if necessary.
+SHA-1 tag stored in index does not match SHA tag stored in this script.
+
+
+ rm -rf build/*
+ 
+ Compile in the cluster: 
+ 
+actually, I think these files are written using the config file externals/metis/meson.build.
+So I think it is sufficient to empty the build directory and edit the meson.build script
+
+You have to remove (at least) these 2:
+cc1: warning: unrecognized command line option "-Wno-absolute-value"
+cc1: warning: unrecognized command line option "-Wno-misleading-indentation"
+
+
+When CODIPACK and Other updates are installed, the following command should be used:
+
+git submodule update
+
+
+FOR NEMO:
+
+1) DELETE SU2_BIN AND SU2 FOLDER with rm -rf
+1) do pip install ninja
+2) clone SU2 from the website, do not compile inmediatly
+3) switch to branch feature_nemo_turb_v2
+4) ./meson.py build -Dwarning_level=2 -Denable-autodiff=true -Denable-directdiff=false -Dwith-mpi=disabled -Denable-cgns=true -Denable-tecio=false -Denable-mpp=true --prefix=/home/cristopher/codes/SU2 --buildtype=debug
+5)
+
+For neural networks in SU2:
+1) reconfigure and add -Denable-mlpcpp=true
+
+FOR COMBINING TWO MESHES:
+
+bash combineSU2meshes.sh -f 2D_slit_burner_fluid_refined.su2 -f 2D_slit_burner_solid_refined.su2 -o 2D_slit_burner_mesh_refined.su2 -d 2

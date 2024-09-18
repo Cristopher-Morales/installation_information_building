@@ -1,0 +1,47 @@
+github commands to commit and push local changes to origin(github) repository:
+
+1) git status
+2) git add .
+3) git commit -m "compiles but gives NaN"
+
+4) git fetch
+
+4) git pull origin feature_multicomp_properties
+
+then write out the commit message  with ctrl-O 
+and exit with ctrl-X
+
+5) git push origin feature_multicomp_properties
+
+
+remove meson after commits
+
+git checkout "commit-id of previous commit" externals/meson
+
+git add externals/meson
+
+git commit
+
+git push
+
+
+CLANMG-FORMAT:
+
+CHECK ERRORS: clang-format --dry-run --Werror -i /home/cristopher/codes/SU2/SU2_CFD/src/fluid/CFluidModel.cpp
+
+CORRECT ERRORS: clang-format -i /home/cristopher/codes/SU2/SU2_CFD/src/fluid/CFluidModel.cpp
+
+
+GIT REVERT: 
+
+It should be simple:
+
+1) run 'git log --oneline' and find the LATEST correct commit, is should have 7 character hexidecimal name, e.g. 2f5451f.
+
+2) run 'git revert 2f5451f --no-edit', where you replace 2f5451f by the hash you found in step one.
+
+You should have, locally, undone your commit check that everything is fine again. If so you push this commit to remote.
+
+For more info see:
+
+https://www.nobledesktop.com/learn/git/undo-changes

@@ -1,0 +1,6 @@
+module purge
+module load gcc
+module load slurm
+module use /cm/shared/modules/int/all
+module load slurm
+module load SciPy-bundle

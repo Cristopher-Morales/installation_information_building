@@ -1,0 +1,3 @@
+for information about nodes availables inside the cluster:
+
+sinfo -o "%n %e %m %a %c %C"
