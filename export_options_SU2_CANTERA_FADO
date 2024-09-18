@@ -1,0 +1,26 @@
+#     add .bashrc for FADO and Cantera
+##################################################
+##################################################
+#######for SU2 and FADO###########################
+##################################################
+export SU2_RUN=/home/cristopher/codes/SU2/bin
+export SU2_HOME=/home/cristopher/codes/SU2/
+export PATH=$PATH:$SU2_RUN
+export PYTHONPATH=$PYTHONPATH:$SU2_RUN:/home/cristopher/codes/FADO/
+export PYTHONPATH=$PYTHONPATH:$SU2_RUN:/home/cristopher/codes/
+##################################################
+######## FOR MUTATION++ ##########################
+##################################################
+export MPP_DATA_DIRECTORY=$SU2_HOME/subprojects/Mutationpp/data
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SU2_HOME/build/subprojects/Mutationpp
+##################################################
+######## FOR CANTERA    ##########################
+################################################## 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/cristopher/codes/cantera/build/lib
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/home/cristopher/codes/cantera/include/cantera
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/home/cristopher/codes/cantera/include/cantera
+##################################################
+######## for chem1d    ###########################
+##################################################
+alias chem1d='/home/cristopher/codes/chem1d/bin/chem1d'
+
